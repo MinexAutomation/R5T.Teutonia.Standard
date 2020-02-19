@@ -4,4 +4,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>1701;1702;1591;1573</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.Lombardy.Standard\source\R5T.Lombardy.Standard\R5T.Lombardy.Standard.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Teutonia.Default\source\R5T.Teutonia.Default\R5T.Teutonia.Default.csproj" />
+  </ItemGroup>
 </Project>
