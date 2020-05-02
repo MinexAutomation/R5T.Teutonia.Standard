@@ -27,6 +27,17 @@ namespace R5T.Teutonia.Standard
         /// <summary>
         /// Adds the <see cref="IFileSystemCloningOperator"/> service.
         /// </summary>
+        public static IServiceCollection AddFileSystemCloningOperator<TFileSystemCloningOperator>(this IServiceCollection services)
+            where TFileSystemCloningOperator: IFileSystemCloningOperator
+        {
+            services.AddFileSystemCloningOperator();
+
+            return services;
+        }
+
+        /// <summary>
+        /// Adds the <see cref="IFileSystemCloningOperator"/> service.
+        /// </summary>
         public static ServiceAction<IFileSystemCloningOperator> AddFileSystemCloningOperatorAction(this IServiceCollection services)
         {
             var serviceAction = new ServiceAction<IFileSystemCloningOperator>(() => services.AddFileSystemCloningOperator());
